@@ -1,0 +1,317 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " # Basics in Python "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 1) Printing  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello World!, Hello again, Again and again. Another line\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hello World!\", \"Hello again\", \"Again and again\",sep=', ', end='. ')\n",
+    "print(\"Another line\")\n",
+    "# The optional argument 'sep' controls the separation beween parameters \n",
+    "# The optional argument end controls the end of every print "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 2) Input Data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "insert a number 4\n",
+      "8\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=eval(input('insert a number '))\n",
+    "print(2*n)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 3)  Declaring variables "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "n=4 #n is integer\n",
+    "n= int(3)\n",
+    "m=4.  # m is float\n",
+    "m=float(4)\n",
+    "c=\"4\" # c is a string"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 4) For loop"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n",
+      "10\n",
+      "7\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(10): # i starts from 0 and ends at 9 \n",
+    "    print(i)\n",
+    "\"\"\"for i in range(2,10):  # i starts from 2 and ends at 9\n",
+    "    print(i)\"\"\"\n",
+    "\"\"\"for i in range(2,10,3): # i ranges in {2,5,8} \n",
+    "    print(i)\"\"\"\n",
+    "for i in range(10,2,-3): # i ranges in {10,7,4}\n",
+    "        print(i)\n",
+    "        \n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 4) Multiplying string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "AAAA\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"A\"*4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Looping over lists "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "George\n",
+      "Marc\n",
+      "Stive\n",
+      "Mari\n",
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "L=[\"George\",\"Marc\",\"Stive\",\"Mari\"]\n",
+    "for name in L:   # iterating over the element of a list\n",
+    "    print(name)\n",
+    "for i in range(len(L)): # iterating over the indices of the list\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.23606797749979\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math  #imports all functions in math but must mention math when calling every funtion\n",
+    "import math as m #imports all functions in math but must mention math as m when calling every funtion\n",
+    "from math import *  #imports all functions in math no need to mention math as lib\n",
+    "from  math import sin   #imports sin from math\n",
+    "\n",
+    "\n",
+    "print(sqrt(5))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 5) Random integers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "print(random.randint(1,10))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 6 ) if clause "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "unexpected EOF while parsing (<ipython-input-9-32a34a4824e5>, line 6)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-9-32a34a4824e5>\"\u001b[0;36m, line \u001b[0;32m6\u001b[0m\n\u001b[0;31m    else:\u001b[0m\n\u001b[0m                  ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m unexpected EOF while parsing\n"
+     ]
+    }
+   ],
+   "source": [
+    "if (condition): \n",
+    "    Statments\n",
+    "if (condition) :   \n",
+    "     Statments\n",
+    "        \n",
+    "else:         \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Ex 7, Page 41"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math as m \n",
+    "n=int( input())\n",
+    "for i in range(2,m.floor(m.sqrt(n)),1):\n",
+    "     if n % int(i**2) ==0:\n",
+    "        print('n is not square free')\n",
+    "        break\n",
+    "     print('n is square free')   \n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
