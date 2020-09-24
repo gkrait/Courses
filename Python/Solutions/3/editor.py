@@ -1,3 +1,5 @@
+
+from string import punctuation
 """
 Write a small text editor, that is, write a program that asks the user to input a text and then the program offers the following  options:
 
@@ -8,14 +10,14 @@ Write a small text editor, that is, write a program that asks the user to input 
 5) Remove capitalization
 6) Putting the first letter in the capital in case it is not.
 """
-from string import punctuation
+
 Text=input("Enter the text: ")
 option=eval(input("Enter the option: "))
 
 
 
 if option ==1:
-   print("The number of words are "+str(len(Text.split())) )
+   print("The number of words are "+str( Text.count(" ")+1))
 if option ==2 :
         search_word=input("Enter the sting that you want to count ")
         print("The number of "+ search_word+"s is " + str( Text.count(search_word) ))
