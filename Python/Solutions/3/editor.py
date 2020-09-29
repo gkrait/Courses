@@ -41,3 +41,4 @@ if option ==6:
                   Text=Text[:i+1]+ " "+Text[i+2].upper() +Text[i+3:]
         
                 
+
